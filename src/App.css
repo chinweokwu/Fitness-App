@@ -55,7 +55,7 @@ body {
 .hero-banner-img {
   position: absolute;
   right: 40px;
-  top: 0px;
+  top: 260px;
   width: 700px;
   height: 900px;
   margin-top: -330px 
@@ -87,7 +87,7 @@ body {
 
 .exercise-card:hover,
 .bodyPart-card:hover {
-  transform: scale(1,1, 1.1);
+  transform: scale(1.1, 1.1);
 }
 
 .search-btn:hover {
