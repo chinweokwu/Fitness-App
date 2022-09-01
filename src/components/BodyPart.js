@@ -20,17 +20,17 @@ const BodyPart = ({item, bodyPart, setBodyPart}) => {
       }}
       onClick={() => {
         setBodyPart(item);
-        window.scrollTo({top: 18000 , left: 100, behaviour: "smooth"})
+        window.scrollTo({top: 1800 , left: 100, behaviour: "smooth"})
       }}
     > 
-      <img 
+{      <img 
         src={GymIcon} 
         alt="gym"
         style={{
           width: '40px',
           height: '40px'
         }}
-      />
+      />}
       <Typography
         fontSize="24px"
         fontWeight="bold"

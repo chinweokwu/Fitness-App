@@ -6,21 +6,31 @@ const HeroBanner = () => {
     <Box 
       sx={{
         mt:{lg: '212px', xs:'70px'},
-        ml:{sm: '50px'}
+        ml:{sm: '50px'},
       }} 
       postion='relative' 
       p='20px'
       mt="23px"
       mb="30px"
     >
-      <Typography color="#FF2625" fontWeight="600" fontSize="26px">
+      <Box>
+       <Typography 
+        color="#FF2625" 
+        fontWeight="600" 
+        fontSize="26px"
+      >
        Gorilla Fitness Club
       </Typography>
       <Typography 
       fontWeight={700} 
-      sx={{fontSize: {lg:'44px', xs: '40px'}}}
+      sx={{
+        fontSize: {
+          lg:'44px', 
+          xs: '40px'
+        }
+      }}
       >
-        Body, soul <br/> and mind
+        Body, Soul <br/> and Mind
       </Typography>
       <Typography 
         fontSize="22px" 
@@ -49,6 +59,7 @@ const HeroBanner = () => {
       >
         Workouts
       </Typography>
+      </Box>
       <img src={HeroBannerImage} alt="banner" className="hero-banner-img"/>
     </Box>
   )

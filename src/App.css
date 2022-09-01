@@ -1,6 +1,6 @@
 body {
   font-family: 'josefin Sans';
-  background-color: '#FFFAFB';
+  background-color: #fae2bd;
 }
 
 * {
@@ -71,8 +71,8 @@ body {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  padding-bottom: 18px;
-  transform: scale(1.1);
+  padding-bottom: 10px;
+  transform: scale(1, 1);
   transition: 0.3s all ease-in-out;
 }
 
@@ -81,7 +81,7 @@ body {
 }
 
 .bodyPart-card {
-  transform: scale(1,1);
+  transform: scale(1, 1);
   transition: 0.3s all ease-in-out; 
 }
 
@@ -93,6 +93,7 @@ body {
 .search-btn:hover {
   color: #FF2625 !important;
   border:  1px solid #FF2625 !important;
+  border-radius: '4px'
 }
 
 
