@@ -40,7 +40,7 @@ const ExerciseDetail = () => {
     <Box sx={{ mt: { lg: '96px', xs: '60px' } }}>
       <Detail exerciseDetail={exerciseDetail}/>
       <ExerciseVideos exerciseVideo={exerciseVideo} name={exerciseDetail.name}/>
-      {/* <SimilarExercises targetMuscleExercises={targetMuscleExercises}  equipmentExercises={equipmentExercises}/> */}
+      <SimilarExercises targetMuscleExercises={targetMuscleExercises}  equipmentExercises={equipmentExercises}/>
     </Box>
   )
 }
