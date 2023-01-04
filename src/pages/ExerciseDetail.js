@@ -1,14 +1,18 @@
 /* eslint-disable react-hooks/exhaustive-deps */
+/*eslint no-unused-vars: "error"*/
 import React,{useEffect, useState} from 'react'
 import {useParams} from 'react-router-dom';
 import { exerciseOptions, fetchData, youtubeOptions } from '../utils/fetchData';
 import ExerciseVideos from '../components/ExerciseVideos';
 import Detail from '../components/Detail';
+import SimilarExercises from '../components/SimilarExercises';
 import {Box} from '@mui/material'
 
 const ExerciseDetail = () => {
   const [exerciseDetail, setExerciseDetail] = useState({});
   const [exerciseVideo, setExerciseVideo] = useState([]);
+  const [targetMuscleExercises, setTargetMuscleExercises]= useState([]);
+  const [equipmentExercises, setEquipmentExercises]= useState([]);
   const {id} = useParams();
 
   useEffect(() => {
@@ -24,10 +28,10 @@ const ExerciseDetail = () => {
       setExerciseVideo(exerciseVideoData.contents)
 
       const targetMuscleExercisesData = await fetchData(`${exerciseDbUrl}/exercises/target/${exerciseDetailData.target}`,exerciseOptions);
-//       setTargetMuscleExercises(targetMuscleExercisesData)
+      setTargetMuscleExercises(targetMuscleExercisesData)
 
       const equipmentExercisesData = await fetchData(`${exerciseDbUrl}/exercises/equipment/${exerciseDetailData.equipment}`,exerciseOptions);
-//       setEquipmentExercises(equipmentExercisesData)
+      setEquipmentExercises(equipmentExercisesData)
     }
     fetchExercisesData()
   }, [id])
